@@ -1,0 +1,290 @@
+@charset "UTF-8";
+@font-face {
+    font-family: Gabriola;
+    src: url("/fonts/Gabriola.ttf");
+}
+
+html, body{
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-attachment: fixed;
+    background-color: #f5ddcb;
+    margin: 0;
+}
+
+div.moldura_top{
+    width: 100%;
+    min-width: 1020px;
+    display: flex;
+    padding: 0%;
+    margin: 0%;
+}
+
+div.moldura_mid{
+    width: 100%;
+    min-width: 1020px;
+    display: flex;
+    padding: 0%;
+    margin: 0%;
+}
+
+div.moldura_bot{
+    width: 100%;
+    min-width: 1020px;
+    display: flex;
+    padding: 0%;
+    margin: 0%;
+    text-align: center;
+}
+
+div.presente{
+    width: 100%;
+    display: block;
+    padding: 0%;
+    margin: auto;
+}
+
+div.presentes{
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    min-width: 1020px;
+    scrollbar-width: auto;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+}
+
+div.caixa-presente{
+    width: 225px;
+    height: 225px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.13);
+}
+
+div#popup-secret{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position:fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    padding-top: 30px;
+}
+
+div#popup-interno{
+    width: 700px;
+    height: fit-content;
+    display: block;
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+    box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.175);
+    border-radius: 16px;
+    color: #282A35;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+div#fechar-popup{
+    text-align: right;
+}
+
+div#botoes-popup{
+    display: flex;
+    text-align: right;
+}
+
+div#btt-voltar{
+    width: 100%;
+    display: block;
+    padding: 0%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+img#img-popup{
+    margin: auto;
+    border-radius: 3px;
+}
+
+img.img-presente{
+    border-radius: 10px;
+}
+
+img.moldura_canto_cima_esquerda{
+    width: 290px;
+    height: 578px;
+    padding: 0%;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+img.moldura_canto_cima_direita{
+    width: 290px;
+    height: 578px;
+    padding: 0%;
+    margin-left: auto;
+    margin-bottom: 5%;
+}
+
+img.moldura_canto_baixo_direita{
+    width: 290px;
+    height: 578px;
+    padding: 0%;
+    margin-left: auto;
+    margin-top: 5%;
+}
+img.moldura_canto_baixo_esquerda{
+    width: 290px;
+    height: 578px;
+    padding: 0%;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+img.moldura_lateral_meio_esquerda{
+    width: 180px;
+    height: 400px;
+    padding: 0%;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: right;
+}
+img.moldura_lateral_meio_direita{
+    width: 180px;
+    height: 400px;
+    padding: 0%;
+    margin-left: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: right;
+}
+
+img.logo{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+
+img.logo_presente{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+
+img#fechar-logo{
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    padding: 10px;
+}
+
+picture{
+    margin: auto;
+}
+
+h1{
+    font-family: Gabriola;
+    font-size: 100px;
+    color: #1a5479;
+    text-align: center;
+    margin: auto;
+}
+
+h2{
+    font-family: Gabriola;
+    font-size: 80px;
+    color: #1a5479;
+    text-align: center;
+    margin: auto;
+}
+
+p{
+    font-family: Gabriola;
+    font-size: 25px;
+    text-align: center;
+    margin: auto;
+
+}
+
+p#desc-popup{
+    font-size: 40px;
+}
+
+p#valor-popup{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p#cod-pix-popup{
+    width: auto;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 7px;
+}
+
+p#p-informativo{
+    font-size: 18px;
+}
+
+p#ver-pixcop{
+    margin: 0%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    width: 70%;
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color: rgb(24, 197, 24);
+    color: white;
+}
+
+a.a-presente {
+    margin: auto;
+    text-align: center;
+    display: block;
+    width: 250px;
+}
+
+button#copiar-qrcode{
+    margin-left: auto;
+    cursor: pointer;
+    height: 30px;
+    background-color: rgb(88, 88, 252);
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+button.btt-destaque{
+    cursor: pointer;
+    height: 40px;
+    background-color: rgb(88, 88, 252);
+    border-radius: 10px;
+    color: white;
+    border: none;
+    margin: 10px;
+    font-size: 25px;
+}
+
+button#btt-voltar-bot{
+    margin: auto;
+    vertical-align: middle;
+}
+
+button:hover{
+    opacity: 0.9;
+}

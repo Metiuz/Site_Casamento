@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Presentes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="carregarPresentes()">
+    <div class="moldura_top">
+        <img class="moldura_canto_cima_esquerda" src="images/moldura/moldura_esquerda_cima-290.png" alt="Moldura Esquerda Cima">
+        <h1>Presentes</h1>
+        <img class="moldura_canto_cima_direita" src="images/moldura/moldura_direita_cima-290.png" alt="Moldura Direita Cima">
+    </div>
+    <div class="presentes">
+
+    </div>
+    <div id="popup-secret">
+        <div id="popup-interno">
+            <div id="fechar-popup">
+                <img id="fechar-logo" src="images/x_icon.png" alt="Fechar" onclick="fecharPOPUP()">
+            </div>
+            <img id="img-popup" src="" alt="Foto Presente">
+            <p id="desc-popup"></p>
+            <p id="valor-popup"></p>
+            <img id="qrcode" src="" alt="QRcode">
+            <p id="cod-pix-popup"></p>
+            <div id="botoes-popup">
+                <p id="ver-pixcop">Código PIX copiado para Área de transferência</p>
+                <button id="copiar-qrcode" onclick="copiarCODPIX()">Copiar código PIX</button>
+            </div>
+        </div>
+    </div>
+   <div class="moldura_bot">
+        <img class="moldura_canto_baixo_esquerda" src="images/moldura/moldura_esquerda_baixo-290.png" alt="Moldura Esquerda Baixo">
+        <div id="btt-voltar">
+            <a class="a-presente" href="/">
+                <button id="btt-voltar-bot" class="btt-destaque">Voltar à página inicial</button>
+            </a>
+        </div>
+        <img class="moldura_canto_baixo_direita" src="images/moldura/moldura_direita_baixo-290.png" alt="Moldura Esquerda Baixo">
+    </div>
+   <script src="js/script.js"></script>
+   
+</body>
+</html>
