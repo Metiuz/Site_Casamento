@@ -192,6 +192,10 @@ img#fechar-logo{
     padding: 10px;
 }
 
+img.imgs-casal{
+    border-radius: 2px;
+}
+
 picture{
     margin: auto;
 }
@@ -220,6 +224,10 @@ p{
 
 }
 
+p.txt-apresent{
+    padding: 10px;
+}
+
 p#desc-popup{
     font-size: 40px;
 }
@@ -230,6 +238,7 @@ p#valor-popup{
 }
 
 p#cod-pix-popup{
+    display: none;
     width: auto;
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
@@ -272,7 +281,7 @@ button#copiar-qrcode{
 button.btt-destaque{
     cursor: pointer;
     height: 40px;
-    background-color: rgb(88, 88, 252);
+    background-color: rgb(60, 130, 158);
     border-radius: 10px;
     color: white;
     border: none;

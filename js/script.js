@@ -104,12 +104,12 @@ class Pix {
       //RETORNA CÓDIGO CRC16 DE 4 CARACTERES
       return this.ID_CRC16 + "04" + dechex(resultado).toUpperCase();
     }
-  };
+};
   
 
 let dicionario_presentes = [{
     "link":"/images/presentes/presente0.png",
-    "desc":"Lençol",
+    "desc":"Roupa de cama",
     "preço":265
 },{
     "link":"/images/presentes/presente1.png",
@@ -177,8 +177,8 @@ let dicionario_presentes = [{
     "preço":199
 },{
     "link":"/images/presentes/presente17.png",
-    "desc":"Utensílios",
-    "preço":75
+    "desc":"Utensílios de cozinha",
+    "preço":145
 },{
     "link":"/images/presentes/presente18.png",
     "desc":"Kit de Ferramentas",
@@ -209,8 +209,8 @@ let dicionario_presentes = [{
     "preço":300
 },{
     "link":"/images/presentes/presente25.png",
-    "desc":"Passeio de escuna para casal",
-    "preço":1700
+    "desc":"Passeio de escuna para o casal",
+    "preço":300
 },{
     "link":"/images/presentes/presente26.png",
     "desc":"Celular",
