@@ -32,7 +32,9 @@
             <p id="cod-pix-popup"></p>
             <div id="botoes-popup">
                 <p id="ver-pixcop">Código PIX copiado para Área de transferência</p>
-                <select name="fracao-valor" id="fracao"></select>
+                <select name="fracao-valor" id="fracao" onchange="onSelect_Values(this)">
+                    <option value="1x">À Vista</option>
+                </select>
                 <button id="copiar-qrcode" onclick="copiarCODPIX()">Copiar código PIX</button>
             </div>
         </div>

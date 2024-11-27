@@ -244,12 +244,21 @@ function abrirPOPUP(elemento){
     let tit_presente = document.querySelector('p#desc-popup')
     let preco_presente = document.querySelector('p#valor-popup')
     let codpix = document.querySelector('p#cod-pix-popup')
+    let select_valor = document.querySelector("select#fracao")
     div_secret.style.display = "block"
     img_secret_interna.src = elemento.children[0].src
     tit_presente.innerHTML = elemento.children[0].alt
     preco_presente.innerHTML = searchValue(elemento.children[0].alt).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
     codpix.innerHTML = gerarCODPIX(searchValue(elemento.children[0].alt))
     genQRcode()
+    let parcelas = evaluateFractions(searchValue(elemento.children[0].alt))
+    for(let inic_parc = 2;inic_parc <= parcelas; inic_parc++){
+        let options = document.createElement('option')
+        options.setAttribute('value', `${inic_parc}`)
+        options.innerHTML = `1/${inic_parc} do Valor`
+        select_valor.appendChild(options)
+    }
+    console.log(parcelas, searchValue(elemento.children[0].alt) / parcelas)
 }
 
 function fecharPOPUP(){
@@ -293,4 +302,37 @@ function copiarCODPIX(){
     let txtcop = document.querySelector('p#ver-pixcop')
     navigator.clipboard.writeText(codtocopy.innerHTML)
     txtcop.style.display = "block"
+}
+
+function evaluateFractions(x){
+    let parcelas = 1
+    let fraction = x/parcelas
+    if (x>200){
+        if(fraction > 200){
+        while (fraction > 200) {
+            fraction = x/parcelas
+            parcelas ++
+        }
+        parcelas --
+        }
+        if(fraction < 200){
+            parcelas --
+            fraction = x/parcelas
+        }
+    } else {
+        parcelas = 1
+    }
+    return parcelas
+}
+
+function onSelect_Values(elemento){
+    let txtcop = document.querySelector('p#ver-pixcop')
+    let val_tot = searchValue(document.querySelector('p#desc-popup').innerHTML)
+    let parcelas= elemento.selectedIndex + 1
+    let preco_presente = document.querySelector('p#valor-popup')
+    let codpix = document.querySelector('p#cod-pix-popup')
+    txtcop.style.display = "none"
+    preco_presente.innerHTML = (val_tot/parcelas).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    codpix.innerHTML = gerarCODPIX(val_tot/parcelas)
+    genQRcode()
 }
