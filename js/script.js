@@ -106,7 +106,6 @@ class Pix {
     }
 };
   
-
 let dicionario_presentes = [{
     "link":"/images/presentes/presente0.png",
     "desc":"Roupa de cama",

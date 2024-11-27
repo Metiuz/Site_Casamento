@@ -103,7 +103,8 @@ div#fechar-popup{
 
 div#botoes-popup{
     display: flex;
-    text-align: right;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 div#btt-voltar{
@@ -270,7 +271,8 @@ a.a-presente {
 }
 
 button#copiar-qrcode{
-    margin-left: auto;
+    margin-left: 5px;
+    margin-right: 5px;
     cursor: pointer;
     height: 30px;
     background-color: rgb(88, 88, 252);
@@ -296,4 +298,8 @@ button#btt-voltar-bot{
 
 button:hover{
     opacity: 0.9;
+}
+
+select#fracao{
+    margin-left: 5px;
 }
