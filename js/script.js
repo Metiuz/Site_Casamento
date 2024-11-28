@@ -107,115 +107,115 @@ class Pix {
 };
   
 let dicionario_presentes = [{
-    "link":"/images/presentes/presente0.png",
+    "link":"/images/presentes/presente0.jpg",
     "desc":"Roupa de cama",
     "preço":265
 },{
-    "link":"/images/presentes/presente1.png",
+    "link":"/images/presentes/presente1.jpg",
     "desc":"Lençol",
     "preço":165
 },{
-    "link":"/images/presentes/presente2.png",
+    "link":"/images/presentes/presente2.jpg",
     "desc":"Ventilador de teto",
     "preço":380
 },{
-    "link":"/images/presentes/presente3.png",
+    "link":"/images/presentes/presente3.jpg",
     "desc":"Televisão",
     "preço":2000
 },{
-    "link":"/images/presentes/presente4.png",
+    "link":"/images/presentes/presente4.jpg",
     "desc":"Talheres",
     "preço":154
 },{
-    "link":"/images/presentes/presente5.png",
+    "link":"/images/presentes/presente5.jpg",
     "desc":"Guarda roupa",
     "preço":1418
 },{
-    "link":"/images/presentes/presente6.png",
+    "link":"/images/presentes/presente6.jpg",
     "desc":"Ar condicionado",
     "preço":2800
 },,{
-    "link":"/images/presentes/presente7.png",
+    "link":"/images/presentes/presente7.jpg",
     "desc":"Sofá",
     "preço":2070
 },{
-    "link":"/images/presentes/presente8.png",
+    "link":"/images/presentes/presente8.jpg",
     "desc":"Máquina de lavar",
     "preço":2700
 },{
-    "link":"/images/presentes/presente9.png",
+    "link":"/images/presentes/presente9.jpg",
     "desc":"Jogo de panelas",
     "preço":428
 },{
-    "link":"/images/presentes/presente10.png",
+    "link":"/images/presentes/presente10.jpg",
     "desc":"Fogão",
     "preço":1700
 },{
-    "link":"/images/presentes/presente11.png",
+    "link":"/images/presentes/presente11.jpg",
     "desc":"Jogo de potes",
     "preço":280
 },{
-    "link":"/images/presentes/presente12.png",
+    "link":"/images/presentes/presente12.jpg",
     "desc":"Panela de Pressão Elétrica",
     "preço":393
 },{
-    "link":"/images/presentes/presente13.png",
+    "link":"/images/presentes/presente13.jpg",
     "desc":"Microondas",
     "preço":693.99
 },{
-    "link":"/images/presentes/presente14.png",
+    "link":"/images/presentes/presente14.jpg",
     "desc":"Geladeira",
     "preço":5185
 },{
-    "link":"/images/presentes/presente15.png",
+    "link":"/images/presentes/presente15.jpg",
     "desc":"Air Fryer",
     "preço":355
 },{
-    "link":"/images/presentes/presente16.png",
+    "link":"/images/presentes/presente16.jpg",
     "desc":"Chuveiro",
     "preço":199
 },{
-    "link":"/images/presentes/presente17.png",
+    "link":"/images/presentes/presente17.jpg",
     "desc":"Utensílios de cozinha",
     "preço":145
 },{
-    "link":"/images/presentes/presente18.png",
+    "link":"/images/presentes/presente18.jpg",
     "desc":"Kit de Ferramentas",
-    "preço":90
+    "preço":150
 },{
-    "link":"/images/presentes/presente19.png",
+    "link":"/images/presentes/presente19.jpg",
     "desc":"2 meses de academia",
     "preço":200
 },{
-    "link":"/images/presentes/presente20.png",
+    "link":"/images/presentes/presente20.jpg",
     "desc":"RP no LOL",
     "preço":84
 },{
-    "link":"/images/presentes/presente21.png",
+    "link":"/images/presentes/presente21.jpg",
     "desc":"Acessórios de computador",
     "preço":350
 },{
-    "link":"/images/presentes/presente22.png",
+    "link":"/images/presentes/presente22.jpg",
     "desc":"Jogo Black Myth: Wukong",
     "preço":230
 },{
-    "link":"/images/presentes/presente23.png",
+    "link":"/images/presentes/presente23.jpg",
     "desc":"Kimono",
     "preço":290
 },{
-    "link":"/images/presentes/presente24.png",
+    "link":"/images/presentes/presente24.jpg",
     "desc":"Jantar de lua de mel",
     "preço":300
 },{
-    "link":"/images/presentes/presente25.png",
+    "link":"/images/presentes/presente25.jpg",
     "desc":"Passeio de escuna para o casal",
     "preço":300
 },{
-    "link":"/images/presentes/presente26.png",
+    "link":"/images/presentes/presente26.jpg",
     "desc":"Celular",
     "preço":899
 },{
-    "link":"/images/presentes/presente27.png",
+    "link":"/images/presentes/presente27.jpg",
     "desc":"Monitor de computador",
     "preço":877
 }
@@ -245,6 +245,11 @@ function abrirPOPUP(elemento){
     let preco_presente = document.querySelector('p#valor-popup')
     let codpix = document.querySelector('p#cod-pix-popup')
     let select_valor = document.querySelector("select#fracao")
+    let avista = document.createElement('option')
+    select_valor.innerHTML = ''
+    avista.setAttribute('value', '1x')
+    avista.innerHTML = "À Vista"
+    select_valor.appendChild(avista)
     div_secret.style.display = "block"
     img_secret_interna.src = elemento.children[0].src
     tit_presente.innerHTML = elemento.children[0].alt
@@ -258,7 +263,6 @@ function abrirPOPUP(elemento){
         options.innerHTML = `1/${inic_parc} do Valor`
         select_valor.appendChild(options)
     }
-    console.log(parcelas, searchValue(elemento.children[0].alt) / parcelas)
 }
 
 function fecharPOPUP(){
