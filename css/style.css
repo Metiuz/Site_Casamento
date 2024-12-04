@@ -79,7 +79,9 @@ div#popup-secret{
     left: 0;
     background-color: rgba(0, 0, 0, 0.4);
     overflow: auto;
-    padding-top: 30px;
+    /* padding-top: 30px; */
+    text-align: center;
+    align-content: center;
 }
 
 div#popup-interno{
@@ -198,6 +200,7 @@ img#fechar-logo{
     height: 20px;
     margin: auto;
     padding: 10px;
+    cursor: pointer;
 }
 
 img.imgs-casal{
