@@ -314,6 +314,8 @@ button.btt-destaque{
 }
 
 button#btt-voltar-bot{
+    height: auto;
+    padding: 5px;
     margin: auto;
     vertical-align: middle;
 }
